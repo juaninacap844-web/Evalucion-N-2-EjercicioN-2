@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Chile — Reserva</title>
+  <link rel="stylesheet" href="CSS/styles1.css">
+  <script src="JS/ejercicio1.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Hotel Chile</div>
+  <div>
+    <a href="ejercicio1.html" class="active">Reserva</a>
+    <a href="ejercicio2.html">Fechas</a>
+    <a href="ejercicio3.html">Habitaciones</a>
+  </div>
+</nav>
+
+<div class="container">
+  <center>
+    <h1>Hacer Reserva</h1>
+    <p class="subtitulo"><b>Complete todos los campos para confirmar</b></p>
+  </center>
+  <div class="card">
+
+    <div class="fila">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="nombre">
+        <div class="error-msg" id="err-nombre">Ingrese su nombre</div>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" placeholder="apellido">
+        <div class="error-msg" id="err-apellido">Ingrese su apellido</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="habitacion">Tipo de Habitación</label>
+      <select id="habitacion">
+        <option value="">Seleccione</option>
+        <option value="estandar">Estándar</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="suite">Suite</option>
+      </select>
+      <div class="error-msg" id="err-habitacion">Seleccione una habitación</div>
+    </div>
+
+    <div class="form-group">
+      <label>Servicios adicionales</label>
+      <div class="check-group">
+        <input type="checkbox" id="desayuno">
+        <label for="desayuno">Desayuno incluido</label>
+      </div>
+      <div class="check-group">
+        <input type="checkbox" id="spa">
+        <label for="spa">Acceso al Spa</label>
+      </div>
+      <div class="check-group">
+        <input type="checkbox" id="picina">
+        <label for="picina">Acceso a la picina</label>
+      </div>
+      <div class="error-msg" id="err-checks">Marque al menos un servicio</div>
+    </div>
+
+    <button class="btn" onclick="validarFormulario()">Confirmar Reserva</button>
+
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <h2> Reserva Confirmada</h2>
+    <div id="modal-body"></div>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+
+</body>
+</html>

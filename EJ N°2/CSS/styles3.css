@@ -1,0 +1,160 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #000000;
+}
+
+nav {
+  background: #2c3e50;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
+
+nav a:hover, nav a.active {
+  color: white;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.subtitulo {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input:focus, select:focus {
+  border-color: #2c3e50;
+}
+
+.room-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.room-preview {
+  height: 250px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.4s;
+}
+
+.room-info {
+  padding: 16px;
+}
+
+.room-nombre {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  transition: color 0.4s;
+}
+
+.room-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.botones-estilo {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-estilo {
+  flex: 1;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: all 0.2s;
+}
+
+.btn-estilo:hover, .btn-estilo.activo {
+  background: #2c3e50;
+  color: white;
+  border-color: #2c3e50;
+}
+
+.control-group {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.control-group label {
+  font-weight: normal;
+  color: #555;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+  accent-color: #2c3e50;
+}
+
+input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px;
+}

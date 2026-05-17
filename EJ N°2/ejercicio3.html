@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Chile — Habitaciones</title>
+  <link rel="stylesheet" href="CSS/styles3.css">
+  <script src="JS/ejercicio3.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Hotel Chile</div>
+  <div>
+    <a href="ejercicio1.html">Reserva</a>
+    <a href="ejercicio2.html">Fechas</a>
+    <a href="ejercicio3.html" class="active">Habitaciones</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Tipos de Habitación</h1>
+  <p class="subtitulo"><b>Personalizar y cambiar el estilo</b></p>
+
+  <div class="card">
+
+    <div class="room-card" id="roomCard">
+      <div class="room-preview" id="roomPreview">
+        <img id="roomImg" alt="Habitación" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="room-info" id="roomInfo">
+        <div class="room-nombre" id="roomNombre">Seleccione una habitación</div>
+        <div class="room-desc" id="roomDesc">Elija una opción para ver los detalles.</div>
+      </div>
+    </div>
+
+    <div class="botones-estilo">
+      <button class="btn-estilo" onclick="cambiarHabitacion('estandar', this)">Estándar</button>
+      <button class="btn-estilo" onclick="cambiarHabitacion('deluxe', this)">Deluxe</button>
+      <button class="btn-estilo" onclick="cambiarHabitacion('suite', this)">Suite</button>
+    </div>
+
+    <div class="control-group">
+
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px;">
+        <div class="form-group">
+          <label for="colorCarta">Color de fondo de carta</label>
+          <input type="color" id="colorCarta" value="#e0e0e0"
+            oninput="cambiarFondoCarta(this.value)">
+        </div>
+        <div class="form-group">
+          <label for="colorTitulo">Color del título</label>
+          <input type="color" id="colorTitulo" value="#333333"
+            oninput="cambiarColorTitulo(this.value)">
+        </div>
+        <div class="form-group">
+          <label for="colorDesc">Color del texto de la descripción</label>
+          <input type="color" id="colorDesc" value="#666666"
+            oninput="cambiarColorDesc(this.value)">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="slider">Tamaño del título: <span id="sliderVal">1.1</span>rem</label>
+        <input type="range" id="slider" min="0.8" max="2.5" step="0.1" value="1.1"
+          oninput="cambiarTamanio(this.value)">
+      </div>
+
+      <div class="botones-estilo" style="margin-top:10px;">
+        <button class="btn-estilo" onclick="resetear()">Resetear</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

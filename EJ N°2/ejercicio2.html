@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Chile — Fechas</title>
+  <link rel="stylesheet" href="CSS/styles2.css">
+  <script src="JS/ejercicio2.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Hotel Chile</div>
+  <div>
+    <a href="ejercicio1.html">Reserva</a>
+    <a href="ejercicio2.html" class="active">Fechas</a>
+    <a href="ejercicio3.html">Habitaciones</a>
+  </div>
+</nav>
+
+<div class="container">
+  <center>
+    <h1>Período de alojamiento</h1>
+    <p class="subtitulo"><b>Ingrese las fechas de su visita</b></p>
+  </center>
+  <div class="card">
+
+    <div class="fila">
+      <div class="form-group">
+        <label for="fechaInicio">Fecha de inicio </label>
+        <input type="date" id="fechaInicio">
+        <div class="error-msg" id="error-inicio">Ingrese la fecha de llegada</div>
+      </div>
+      <div class="form-group">
+        <label for="fechaCierre"> Fecha de cierre</label>
+        <input type="date" id="fechaCierre">
+        <div class="error-msg" id="error-cierre">Ingrese la fecha de salida</div>
+      </div>
+    </div>
+
+    <button class="btn" onclick="verificarFechas()">Verificar</button>
+
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <h2> Fechas Válidas</h2>
+    <div id="modal-body"></div>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+</body>
+</html>
